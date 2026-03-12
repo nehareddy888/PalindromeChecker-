@@ -11,3 +11,4 @@ public class Palindromeapp
         // Program continues to next use case or exits.
     }
 }
+
