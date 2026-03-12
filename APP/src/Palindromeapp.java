@@ -1,28 +1,25 @@
 public class Palindromeapp
 {
     public static void main(String[] args) {
+        String input = "madam";
+        String reversed = "";
 
-        String word = "madam";
-        boolean isPalindrome = true;
-
-        // Loop only till half of the string length
-        for (int i = 0; i < word.length() / 2; i++) {
-            if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
-                isPalindrome = false;
-                break;
-            }
+        // Iterate from the last character to the first
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
         }
 
         System.out.println();
         System.out.println("--------------------------");
-        System.out.println("Palindrome Checker - UC2");
+        System.out.println("Palindrome Checker - UC3");
         System.out.println("--------------------------");
-        System.out.println("Checking word: " + word);
+        System.out.println("Original : " + input);
+        System.out.println("Reversed : " + reversed);
 
-        if (isPalindrome) {
-            System.out.println("Result: \"" + word + "\" IS a palindrome.");
+        if (input.equals(reversed)) {
+            System.out.println("Result: \"" + input + "\" IS a palindrome.");
         } else {
-            System.out.println("Result: \"" + word + "\" is NOT a palindrome.");
+            System.out.println("Result: \"" + input + "\" is NOT a palindrome.");
         }
 
         System.out.println("--------------------------");
